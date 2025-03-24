@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Markmap</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+      #buttonContainer {
+        position: fixed;
+        margin: 10px;
+      }
+      #buttonColor {
+        box-sizing: border-box;
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid #e74c3c;
+        border-radius: 0.6em;
+        color: #e74c3c;
+        cursor: pointer;
+        display: flex;
+        align-self: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        padding: 1.2em 2.8em;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+        &:hover {
+          box-shadow: 0 0 40px 40px #e74c3c inset;
+        }
+        &:hover,
+        &:focus {
+          color: #fff;
+          outline: 0;
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"
+    />
+  </head>
+  <body>
+    <div id="buttonContainer">
+      <a href="./index.html"><button id="buttonColor">돌아가기</button></a>
+    </div>
+    <svg id="mindmap"></svg>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content: "<strong>Skill</strong>",
+          children: [
+            {
+              content: "<strong>Frontend</strong>",
+              children: [
+                {
+                  content: "HTML",
+                  children: [],
+                  payload: { tag: "li", lines: "2,3" },
+                },
+                {
+                  content: "CSS",
+                  children: [],
+                  payload: { tag: "li", lines: "3,4" },
+                },
+                {
+                  content: "JS",
+                  children: [],
+                  payload: { tag: "li", lines: "4,5" },
+                },
+                {
+                  content: "React",
+                  children: [],
+                  payload: { tag: "li", lines: "5,6" },
+                },
+                {
+                  content: "TypeScript",
+                  children: [],
+                  payload: { tag: "li", lines: "6,7" },
+                },
+              ],
+              payload: { tag: "li", lines: "1,7" },
+            },
+            {
+              content: "<strong>Backend</strong>",
+              children: [
+                {
+                  content: "Java",
+                  children: [],
+                  payload: { tag: "li", lines: "8,9" },
+                },
+                {
+                  content: "SQL",
+                  children: [],
+                  payload: { tag: "li", lines: "9,10" },
+                },
+              ],
+              payload: { tag: "li", lines: "7,10" },
+            },
+          ],
+          payload: { tag: "li", lines: "0,10" },
+        },
+        null
+      );
+    </script>
+  </body>
+</html>
