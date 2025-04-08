@@ -186,12 +186,14 @@ header > ul > li.active:after {
 .award-item {
   display: flex;
   align-items: center;
+  justify-content: flex-start; /* 왼쪽 정렬 고정 */
   background: #333;
-  padding: 15px;
+  padding: 15px 20px; /* 좌우 패딩을 늘려 공간 확보 */
   border-radius: 10px;
   width: 100%;
-  transition: transform 0.3s ease-in-out;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+  gap: 20px; /* 아이콘과 텍스트 사이 여백 통일 */
 }
 
 .award-item:hover {
@@ -201,19 +203,19 @@ header > ul > li.active:after {
 
 /* 아이콘 스타일 */
 .award-icon {
-  font-size: 30px;
-  margin-right: 15px;
+  font-size: 32px;
+  flex-shrink: 0; /* 아이콘 크기 고정 */
 }
-
-/* 수상 텍스트 */
+.award-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .award-text h3 {
   color: #ffcc00;
   font-size: 20px;
   margin-bottom: 5px;
-}
-
-.award-text p {
-  font-size: 16px;
 }
 
 /* 프로젝트 섹션 중앙 정렬 */
