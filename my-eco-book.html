@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY ECO BOOK 프로젝트</title>
+    <style>
+      body {
+        background-color: #121212;
+        margin: 0;
+      }
+
+      .back-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #ffcc00;
+        font-size: 16px;
+        text-decoration: none;
+        background-color: #1e1e1e;
+        padding: 8px 14px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s;
+      }
+
+      .back-btn:hover {
+        background-color: #2c2c2c;
+      }
+
+      .project-detail-container {
+        padding: 60px 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        color: white;
+      }
+
+      .project-title {
+        font-size: 36px;
+        color: #ffcc00;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .project-desc {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 40px;
+        color: #ddd;
+        text-align: center;
+      }
+
+      .feature-list {
+        background: #222;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 40px;
+      }
+
+      .feature-list h3 {
+        color: #ffcc00;
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      .feature-list ul {
+        list-style: disc;
+        padding-left: 20px;
+      }
+
+      .feature-list li {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+
+      .screenshot {
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .screenshot img {
+        max-width: 90%;
+        max-height: 400px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .visit-btn {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        background: #ffcc00;
+        color: black;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 10px;
+        max-width: 200px;
+        margin: 0 auto;
+        transition: background 0.3s;
+      }
+
+      .visit-btn:hover {
+        background: #e6b800;
+      }
+      .award-tag {
+        display: inline-block;
+        background-color: #ffcc00;
+        color: #121212;
+        font-weight: bold;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 14px;
+        margin: 0 auto 16px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./index.html" class="back-btn">← 돌아가기</a>
+
+    <div class="project-detail-container">
+      <div class="award-tag">🏆 국토엑스포 인기부스상</div>
+      <h1 class="project-title">MY ECO BOOK</h1>
+      <p class="project-desc">
+        <strong>MY ECO BOOK</strong>은 친환경 생활을 지원하기 위한 지도 기반 웹
+        애플리케이션입니다. 카카오맵 API와 서울시 공공데이터(따릉이, 강수량
+        등)를 활용하여 자전거를 타며 이산화탄소를 절감한 양을 시각화하고,
+        사용자의 위치에 따라 친환경 정보를 제공합니다.
+      </p>
+
+      <div class="feature-list">
+        <h3>🌱 주요 기능</h3>
+        <ul>
+          <li>따릉이 대여소 위치 시각화</li>
+          <li>탄소 절감량 계산 및 시각화</li>
+          <li>서울시 강수량 API를 활용한 실시간 우천 정보 제공</li>
+          <li>카카오맵 경로 안내 API를 통한 길찾기 기능</li>
+        </ul>
+      </div>
+
+      <div class="screenshot">
+        <img src="./img/smart_geo.jpg" alt="MY ECO BOOK 스크린샷" />
+      </div>
+
+      <a
+        href="https://deadrabbit07.github.io/my-eco-book/"
+        target="_blank"
+        class="visit-btn"
+      >
+        프로젝트 바로가기
+      </a>
+    </div>
+  </body>
+</html>

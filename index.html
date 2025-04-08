@@ -90,39 +90,38 @@
 
     <section class="section" id="section_4">
       <h2 class="section-title">💻 프로젝트</h2>
-      <div class="project-container">
-        <div class="project-card">
-          <img src="./img/project1.png" alt="프로젝트 chill_guy" />
-          <div class="project-info">
+      <div class="project-wrapper">
+        <!-- 수상작 -->
+        <div class="project-row">
+          <a href="./daily-chill.html" class="project-card award">
+            <span class="award-badge">🏆 수상작</span>
             <h3>Daily Chill</h3>
-            <p>TypeScript와 TailwindCss를 사용해서 만든 chill한 하루를 보낼 수 있게 도와주는 웹사이트</p>
-            <a href="https://chill-guy-kings-projects-1a26a883.vercel.app" class="project-link" target="_blank">자세히 보기</a>
-
-          </div>
+            <p>TypeScript와 TailwindCss로 만든 chill한 하루 웹사이트</p>
+          </a>
+    
+          <a href="./puzzle.html" class="project-card award">
+            <span class="award-badge">🏆 수상작</span>
+            <h3>puzzle</h3>
+            <p>코딩 문제를 풀 수 있는 웹사이트</p>
+          </a>
+    
+          <a href="./my-eco-book.html" class="project-card award">
+            <span class="award-badge">🏆 수상작</span>
+            <h3>MY ECO BOOK</h3>
+            <p>카카오맵과 따릉이 API 기반 친환경 지도 서비스</p>
+          </a>
         </div>
-        <div class="project-card">
-          <img src="./img/project2.png" alt="프로젝트 RestaurantMap" />
-          <div class="project-info">
-            <h3>RestaurantMap</h3>
-            <p>카카오맵 API를 사용한 음식점 검색 웹사이트</p>
-            <a href="https://deadrabbit07.github.io/kakao-map/" class="project-link">자세히 보기</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="./img/project3.png" alt="프로젝트 3" />
-          <div class="project-info">
-            <h3>E-Commerce Site</h3>
-            <p>Next.js와 MongoDB를 이용한 쇼핑몰 사이트</p>
-            <a href="#" class="project-link">자세히 보기</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="./img/project4.png" alt="프로젝트 4" />
-          <div class="project-info">
-            <h3>AI Chatbot</h3>
-            <p>GPT API를 활용한 AI 챗봇 프로젝트</p>
-            <a href="#" class="project-link">자세히 보기</a>
-          </div>                   
+    
+        <!-- 일반작 -->
+        <div class="project-row normal-row">
+          <a href="./restaurant.html" class="project-card">
+            <h3>Restaurant Map</h3>
+            <p>카카오맵 API로 만든 음식점 검색 웹사이트</p>
+          </a>
+          <a href="./map-game.html" class="project-card">
+            <h3>map-game</h3>
+            <p>냥코대전쟁을 참고한 카카오맵 기반 게임</p>
+          </a>
         </div>
       </div>
     </section>

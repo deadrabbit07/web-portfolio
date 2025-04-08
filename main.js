@@ -101,6 +101,9 @@ function updateActiveMenu(activeSectionId) {
     }
   });
 }
+document.querySelectorAll('[data-award="true"]').forEach((card) => {
+  card.classList.add("award");
+});
 
 // 초기 실행 (첫 번째 섹션을 활성화)
 updateActiveMenu("section_1");

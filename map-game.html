@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map-game 프로젝트</title>
+    <style>
+      body {
+        background-color: #121212;
+        margin: 0;
+      }
+
+      .back-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #ffcc00;
+        font-size: 16px;
+        text-decoration: none;
+        background-color: #1e1e1e;
+        padding: 8px 14px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s;
+      }
+
+      .back-btn:hover {
+        background-color: #2c2c2c;
+      }
+
+      .project-detail-container {
+        padding: 60px 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        color: white;
+      }
+
+      .project-title {
+        font-size: 36px;
+        color: #ffcc00;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .project-desc {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 40px;
+        color: #ddd;
+        text-align: center;
+      }
+
+      .feature-list {
+        background: #222;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 40px;
+      }
+
+      .feature-list h3 {
+        color: #ffcc00;
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      .feature-list ul {
+        list-style: disc;
+        padding-left: 20px;
+      }
+
+      .feature-list li {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+
+      .screenshot {
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .screenshot img {
+        max-width: 90%;
+        max-height: 400px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .visit-btn {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        background: #ffcc00;
+        color: black;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 10px;
+        max-width: 200px;
+        margin: 0 auto;
+        transition: background 0.3s;
+      }
+
+      .visit-btn:hover {
+        background: #e6b800;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./index.html" class="back-btn">← 돌아가기</a>
+
+    <div class="project-detail-container">
+      <h1 class="project-title">map-game</h1>
+      <p class="project-desc">
+        카카오맵 API를 활용해 위치를 선택하고, 능력치를 설정해 자동 전투를
+        벌이는 웹 게임입니다. 실시간 전투 애니메이션과 스탯 커스터마이징 기능이
+        특징입니다.
+      </p>
+
+      <div class="feature-list">
+        <h3>🎮 주요 기능</h3>
+        <ul>
+          <ul>
+            <li>카카오맵 API로 지역 선택 → 게임 화면으로 전환되는 구조 구현</li>
+            <li>
+              사용자가 게임 시작 전, 능력치(공격력, 체력, 속도)를 10포인트
+              내에서 직접 설정 가능
+            </li>
+            <li>
+              게임은 자동 전투 시스템: 아군/적군 캐릭터가 이동하여 자동으로 충돌
+              및 공격
+            </li>
+            <li>공격 시 캐릭터가 회전하며 타격 애니메이션 효과 부여</li>
+            <li>
+              아군/적군의 체력이 0이 되면 승패 메시지 출력 및 타워를 향해 자동
+              전진
+            </li>
+            <li>CSS 애니메이션과 JS 타이머를 활용한 실시간 인터랙션 구현</li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="screenshot">
+        <img src="./img/map_game_screenshot.jpg" alt="map-game 스크린샷" />
+      </div>
+
+      <a href="#" target="_blank" class="visit-btn"> 프로젝트 바로가기 </a>
+    </div>
+  </body>
+</html>

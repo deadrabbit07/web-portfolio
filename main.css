@@ -1,301 +1,247 @@
+/* 기본 세팅 */
 * {
   margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
 }
 
+body,
 html {
-  overflow: hidden; /* 초기에는 스크롤 차단 */
-}
-
-html,
-body {
-  display: block;
   width: 100%;
   height: 100%;
-  margin: 0;
   background-color: #121212;
   color: white;
+  font-family: "Pretendard", sans-serif;
 }
 
 header {
   position: fixed;
+  top: 0;
   width: 100%;
   height: 50px;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
-  opacity: 0; /* 처음에는 숨김 */
-  transition: opacity 0.5s ease-in-out; /* 부드럽게 나타나도록 설정 */
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
-header > ul {
+header ul {
   display: flex;
-  width: 50%;
-  justify-content: space-between;
+  gap: 40px;
 }
-header > ul > li {
-  color: white;
-  font-weight: 700;
+
+header li {
   cursor: pointer;
-}
-
-header > ul > li:after {
-  display: block;
-  content: "";
-  border-bottom: solid 2px #fff;
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
-}
-header > ul > li:hover:after {
-  transform: scaleX(1);
-}
-header > ul > li.active:after {
-  transform: scaleX(1);
-}
-
-.section {
-  width: 100%;
-  height: 100%;
+  font-weight: 700;
   position: relative;
 }
 
-#section_1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1a1a1a;
-}
-#section_1 > #main_1_p {
-  text-align: center;
-}
-#section_1 > #main_1_p > p {
-  font-size: 60px;
-  font-weight: 700;
+header li::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
 }
 
-/* 스킬 섹션 중앙 정렬 */
-#section_2 {
+header li:hover::after,
+header li.active::after {
+  transform: scaleX(1);
+}
+
+/* 섹션 공통 */
+.section {
+  width: 100%;
+  height: 100vh;
+  padding: 80px 20px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  text-align: center;
-  background-color: #222222;
+  justify-content: center;
 }
 
-/* 제목 스타일 */
+/* 인트로 */
+#section_1 {
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+#main_1_p p {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+/* 제목 공통 */
 .section-title {
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 30px;
   color: #ffcc00;
+  margin-bottom: 30px;
 }
 
-/* 스킬 컨테이너 */
+/* 스킬 */
+#section_2 {
+  background-color: #222;
+}
+
 .skill-container {
   display: flex;
-  align-items: center;
   gap: 50px;
   max-width: 1000px;
-  padding: 20px;
+  align-items: center;
 }
 
-/* 스킬 설명 텍스트 */
 .skill-text {
-  text-align: left;
-  color: white;
   max-width: 500px;
+  text-align: left;
 }
 
 .skill-text h3 {
   font-size: 28px;
   color: #ffcc00;
-  margin-bottom: 10px;
 }
 
-.skill-text p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-/* 스킬 페이지 이동 버튼 */
 .skill-btn {
   display: inline-block;
-  text-decoration: none;
-  color: white;
-  background: #ffcc00;
   padding: 10px 15px;
-  border-radius: 8px;
+  background: #ffcc00;
+  color: black;
   font-weight: bold;
-  transition: background 0.3s ease-in-out;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
 .skill-btn:hover {
   background: #e6b800;
 }
 
-/* 이미지 스타일 */
 .skill-img img {
   width: 350px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  cursor: pointer;
   border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .skill-img img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
 }
 
+/* 수상 */
 #section_3 {
   background-color: #2a2a2a;
 }
-/* 수상 경력 섹션 중앙 정렬 */
-#section_3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* 화면 전체 높이 활용 */
-  text-align: center;
-  background-color: #2a2a2a;
-}
 
-/* 제목 스타일 */
-.section-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #ffcc00;
-}
-
-/* 수상 리스트 스타일 */
 .award-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 15px;
-  width: 100%;
   max-width: 600px;
+  width: 100%;
 }
 
-/* 수상 항목 개별 스타일 */
 .award-item {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* 왼쪽 정렬 고정 */
   background: #333;
-  padding: 15px 20px; /* 좌우 패딩을 늘려 공간 확보 */
+  padding: 15px 20px;
   border-radius: 10px;
-  width: 100%;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease-in-out;
-  gap: 20px; /* 아이콘과 텍스트 사이 여백 통일 */
+  gap: 20px;
+  transition: transform 0.3s;
 }
 
 .award-item:hover {
   transform: translateX(10px);
-  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
 }
 
-/* 아이콘 스타일 */
 .award-icon {
-  font-size: 32px;
-  flex-shrink: 0; /* 아이콘 크기 고정 */
+  font-size: 28px;
 }
-.award-text {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 .award-text h3 {
+  font-size: 18px;
   color: #ffcc00;
-  font-size: 20px;
-  margin-bottom: 5px;
 }
 
-/* 프로젝트 섹션 중앙 정렬 */
+/* 프로젝트 */
 #section_4 {
+  background-color: #333;
+}
+
+/* 프로젝트 전체 */
+.project-section {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  gap: 40px; /* 그대로 유지 */
+}
+
+/* 프로젝트 줄 공통 */
+.project-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  background-color: #333333;
+  padding-top: 40px;
 }
 
-/* 제목 스타일 */
-.section-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #ffcc00;
+/* 수상작 줄은 한 줄로 고정 */
+.award-row {
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
-/* 프로젝트 컨테이너 (그리드 적용) */
-.project-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 반응형 */
-  gap: 20px;
-  padding: 30px;
-  max-width: 1000px;
-}
-
-/* 프로젝트 카드 스타일 */
+/* 프로젝트 카드 공통 */
 .project-card {
   background: #222;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-.project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.project-info {
-  padding: 15px;
-  text-align: center;
-}
-
-.project-info h3 {
-  font-size: 20px;
-  color: #ffcc00;
-  margin-bottom: 10px;
-}
-
-.project-info p {
-  font-size: 14px;
-  color: #ddd;
-  margin-bottom: 10px;
-}
-
-/* 프로젝트 링크 버튼 */
-.project-link {
-  display: inline-block;
-  text-decoration: none;
   color: white;
-  background: #ffcc00;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background 0.3s;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+  position: relative;
 }
 
-.project-link:hover {
-  background: #e6b800;
-}
-
-/* Hover 효과 */
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
+}
+
+.project-card h3 {
+  color: #ffcc00;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 14px;
+}
+
+/* 수상작 강조 스타일 */
+.project-card.award {
+  background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
+  border: 2px solid #ffcc00;
+}
+
+/* 수상 배지 */
+.award-badge {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 0 0 12px 0;
 }
