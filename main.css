@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  overflow: hidden; /* 초기에는 스크롤 차단 */
+}
+
+html,
+body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #121212;
+  color: white;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  opacity: 0; /* 처음에는 숨김 */
+  transition: opacity 0.5s ease-in-out; /* 부드럽게 나타나도록 설정 */
+}
+
+header > ul {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+header > ul > li {
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+header > ul > li:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #fff;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+header > ul > li:hover:after {
+  transform: scaleX(1);
+}
+header > ul > li.active:after {
+  transform: scaleX(1);
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#section_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+}
+#section_1 > #main_1_p {
+  text-align: center;
+}
+#section_1 > #main_1_p > p {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* 스킬 섹션 중앙 정렬 */
+#section_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #222222;
+}
+
+/* 제목 스타일 */
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffcc00;
+}
+
+/* 스킬 컨테이너 */
+.skill-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+/* 스킬 설명 텍스트 */
+.skill-text {
+  text-align: left;
+  color: white;
+  max-width: 500px;
+}
+
+.skill-text h3 {
+  font-size: 28px;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.skill-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* 스킬 페이지 이동 버튼 */
+.skill-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: #ffcc00;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.skill-btn:hover {
+  background: #e6b800;
+}
+
+/* 이미지 스타일 */
+.skill-img img {
+  width: 350px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.skill-img img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+#section_3 {
+  background-color: #2a2a2a;
+}
+/* 수상 경력 섹션 중앙 정렬 */
+#section_3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 화면 전체 높이 활용 */
+  text-align: center;
+  background-color: #2a2a2a;
+}
+
+/* 제목 스타일 */
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffcc00;
+}
+
+/* 수상 리스트 스타일 */
+.award-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* 수상 항목 개별 스타일 */
+.award-item {
+  display: flex;
+  align-items: center;
+  background: #333;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.award-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* 아이콘 스타일 */
+.award-icon {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+/* 수상 텍스트 */
+.award-text h3 {
+  color: #ffcc00;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.award-text p {
+  font-size: 16px;
+}
+
+/* 프로젝트 섹션 중앙 정렬 */
+#section_4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #333333;
+}
+
+/* 제목 스타일 */
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffcc00;
+}
+
+/* 프로젝트 컨테이너 (그리드 적용) */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 반응형 */
+  gap: 20px;
+  padding: 30px;
+  max-width: 1000px;
+}
+
+/* 프로젝트 카드 스타일 */
+.project-card {
+  background: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.project-info h3 {
+  font-size: 20px;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+/* 프로젝트 링크 버튼 */
+.project-link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: #ffcc00;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.project-link:hover {
+  background: #e6b800;
+}
+
+/* Hover 효과 */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}
