@@ -75,14 +75,18 @@
 
       .screenshot {
         margin-top: 30px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* 이미지 사이 간격 */
+        flex-wrap: wrap; /* 반응형 대응 */
       }
 
       .screenshot img {
-        max-width: 90%;
-        max-height: 400px;
+        max-width: 45%;
+        max-height: 300px;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin-bottom: 30px;
       }
 
       .visit-btn {
@@ -138,11 +142,12 @@
       </div>
 
       <div class="screenshot">
-        <img src="./img/puzzle_screenshot.jpg" alt="Puzzle 스크린샷" />
+        <img src="./img/developuzzle-1.png" alt="디지털새싹 APPJAM 우수상" />
+        <img src="./img/developuzzle-2.png" alt="디지털새싹 APPJAM 우수상" />
       </div>
 
       <a
-        href="https://deadrabbit07.github.io/puzzle/"
+        href="https://deadrabbit07.github.io/puzzle_game/"
         target="_blank"
         class="visit-btn"
       >
