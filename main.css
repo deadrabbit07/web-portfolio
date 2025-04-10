@@ -14,6 +14,9 @@ html {
   color: white;
   font-family: "Pretendard", sans-serif;
 }
+body {
+  overflow: hidden;
+}
 
 header {
   position: fixed;
