@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Puzzle 프로젝트</title>
+    <title>DeveloPuzzle 프로젝트</title>
     <style>
       body {
         background-color: #121212;
@@ -77,8 +77,8 @@
         margin-top: 30px;
         display: flex;
         justify-content: center;
-        gap: 20px; /* 이미지 사이 간격 */
-        flex-wrap: wrap; /* 반응형 대응 */
+        gap: 20px;
+        flex-wrap: wrap;
       }
 
       .screenshot img {
@@ -99,13 +99,21 @@
         padding: 12px 20px;
         border-radius: 10px;
         max-width: 200px;
-        margin: 0 auto;
         transition: background 0.3s;
       }
 
       .visit-btn:hover {
         background: #e6b800;
       }
+
+      .btn-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+      }
+
       .award-tag {
         display: inline-block;
         background-color: #ffcc00;
@@ -131,6 +139,7 @@
         재미있게 문제를 해결해나가며, 자연스럽게 프로그래밍 사고를 기를 수
         있도록 구성되어 있어요.
       </p>
+
       <div class="feature-list">
         <h3>🧩 주요 기능</h3>
         <ul>
@@ -142,19 +151,11 @@
       </div>
 
       <div class="screenshot">
-        <img src="./img/developuzzle-1.png" alt="디지털새싹 APPJAM 우수상" />
-        <img src="./img/developuzzle-2.png" alt="디지털새싹 APPJAM 우수상" />
+        <img src="./img/developuzzle-1.png" alt="DeveloPuzzle 스크린샷 1" />
+        <img src="./img/developuzzle-2.png" alt="DeveloPuzzle 스크린샷 2" />
       </div>
 
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          gap: 20px;
-          flex-wrap: wrap;
-          margin-top: 40px;
-        "
-      >
+      <div class="btn-group">
         <a
           href="https://deadrabbit07.github.io/puzzle_game/"
           target="_blank"

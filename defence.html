@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>map-game 프로젝트</title>
+    <title>Digitech-Defence</title>
     <style>
       body {
         background-color: #121212;
         margin: 0;
+        color: white;
       }
 
       .back-btn {
@@ -32,7 +33,6 @@
         padding: 60px 20px;
         max-width: 900px;
         margin: 0 auto;
-        color: white;
       }
 
       .project-title {
@@ -85,6 +85,14 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       }
 
+      .btn-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+      }
+
       .visit-btn {
         display: block;
         text-align: center;
@@ -95,12 +103,20 @@
         padding: 12px 20px;
         border-radius: 10px;
         max-width: 200px;
-        margin: 0 auto;
         transition: background 0.3s;
       }
 
       .visit-btn:hover {
         background: #e6b800;
+      }
+
+      .visit-btn.secondary {
+        background: #333;
+        color: white;
+      }
+
+      .visit-btn.secondary:hover {
+        background: #444;
       }
     </style>
   </head>
@@ -110,47 +126,34 @@
     <div class="project-detail-container">
       <h1 class="project-title">Digitech-Defence</h1>
       <p class="project-desc">
-        카카오맵 API를 활용해 위치를 선택하고, 능력치를 설정해 자동 전투를
-        벌이는 웹 게임입니다. 실시간 전투 애니메이션과 스탯 커스터마이징 기능이
-        특징입니다.
+        <strong>카카오맵 API</strong>를 활용하여 위치를 선택하고, 스탯을 설정한
+        뒤 전투를 벌이는 <strong>자동 전투 게임</strong>입니다. <br />
+        <strong>실시간 애니메이션</strong>과
+        <strong>스탯 커스터마이징</strong> 기능이 특징입니다.
       </p>
 
       <div class="feature-list">
         <h3>🎮 주요 기능</h3>
         <ul>
-          <ul>
-            <li>카카오맵 API로 지역 선택 → 게임 화면으로 전환되는 구조 구현</li>
-            <li>
-              사용자가 게임 시작 전, 능력치(공격력, 체력, 속도)를 10포인트
-              내에서 직접 설정 가능
-            </li>
-            <li>
-              게임은 자동 전투 시스템: 아군/적군 캐릭터가 이동하여 자동으로 충돌
-              및 공격
-            </li>
-            <li>공격 시 캐릭터가 회전하며 타격 애니메이션 효과 부여</li>
-            <li>
-              아군/적군의 체력이 0이 되면 승패 메시지 출력 및 타워를 향해 자동
-              전진
-            </li>
-            <li>CSS 애니메이션과 JS 타이머를 활용한 실시간 인터랙션 구현</li>
-          </ul>
+          <li>카카오맵으로 지역 선택 → 게임 화면 전환 구조 구현</li>
+          <li>
+            게임 시작 전, 능력치(공격력, 체력, 속도) 10포인트 내에서 직접 설정
+          </li>
+          <li>아군/적군 캐릭터 자동 이동 및 충돌 전투 구현</li>
+          <li>공격 시 캐릭터 회전 애니메이션 효과</li>
+          <li>체력 0 → 타워 향해 자동 전진 및 승패 메시지 출력</li>
+          <li>CSS 애니메이션 + JavaScript 타이머를 통한 실시간 인터랙션</li>
         </ul>
       </div>
 
       <div class="screenshot">
-        <img src="./img/digitech-defence.png" alt="map-game 스크린샷" />
+        <img
+          src="./img/digitech-defence.png"
+          alt="Digitech-Defence 게임 스크린샷"
+        />
       </div>
 
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          gap: 20px;
-          flex-wrap: wrap;
-          margin-top: 40px;
-        "
-      >
+      <div class="btn-group">
         <a
           href="https://digitech-defence.vercel.app/index.html"
           target="_blank"
@@ -161,8 +164,7 @@
         <a
           href="https://github.com/deadrabbit07/Digitech-Defence"
           target="_blank"
-          class="visit-btn"
-          style="background: #333; color: white"
+          class="visit-btn secondary"
         >
           GitHub 바로가기
         </a>
