@@ -248,3 +248,16 @@ header li.active::after {
   font-size: 13px;
   border-radius: 0 0 12px 0;
 }
+
+/* 진행중 배지 */
+.progress-badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #00bcd4; /* 하늘색 느낌 */
+  color: black;
+  font-weight: bold;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 0 0 0 12px;
+}
